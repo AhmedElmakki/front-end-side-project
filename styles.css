@@ -1,0 +1,167 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eaeaea;              /* light gray page background */
+  display: flex;
+  justify-content: center;          /* center board horizontally */
+  align-items: center;              /* center board vertically */
+  min-height: 100vh;                /* full screen height */
+  font-family: Arial, sans-serif;
+}
+
+/* The main container */
+.board {
+  display: flex;                    /* sidebar + main content side by side */
+  background: #111111;                /* board background */
+  border-radius: 12px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.30);
+  overflow: hidden;
+  margin: 10px;                     /* space around board */
+  width: 99%;                /* keep it from stretching too wide */
+  height: calc(100vh - 20px); /* fills screen, minus top/bottom margin */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #111111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  overflow-y: auto;           /* scrolls internally if too tall */
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-event {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  margin-bottom: 5%;
+  background: #282828;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* the square container for the plus */
+/* green square background */
+.add-event .plus {
+  display: inline-flex;       /* so the inner plus is centered */
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #C1FF72;  /* square background */
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+}
+
+.add-event .plus .pluss {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white; /* this is the color of the plus */
+  -webkit-mask: url("materials/white plus sign.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("materials/white plus sign.svg") no-repeat center;
+  mask-size: contain;
+}
+
+
+.add-event .label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Collapsible section headers */
+.collapsible {
+  background: none;
+  border: none;
+  width: 90%;
+  text-align: left;
+  padding: 10px 3px;
+  font-size: 12px;
+  font-weight: 250;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #ffffff;   /* ← this draws the line above */
+  margin-top: 10px;             /* space above the line */
+}
+
+.collapsible:hover {
+  color: #fff;
+}
+
+.collapsible::after {
+  content: "";                         /* no text */
+  display: inline-block;
+  width: 14px;                         /* control size */
+  height: 14px;
+  background-image: url("materials/down-arrow.png");
+  background-size: contain;            /* scale inside box */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1); /* makes dark → white */
+}
+
+.collapsible.active::after {
+  transform: rotate(-90deg);
+}
+
+/* Collapsible content */
+.content {
+  max-height: 0;                 /* start hidden */
+  overflow: hidden;              /* hide inner items */
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.3s ease; /* smooth animation */
+}
+
+.collapsible.active + .content {
+  max-height: 500px; /* big enough to fit content */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: #222;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  background: #fafafa;              /* big white/light area */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow-y: auto;           /* main area can also scroll if needed */
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventX Dashboard</title>
+   <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+  <div class="board">
+    
+        <div class="sidebar">
+        <h2>EventX</h2>
+        <button class="add-event">
+            <span class="plus"><span class="pluss"></span></span>
+            
+            <span class="label">Add Quick Event</span>
+            
+        </button>
+
+        <button class="collapsible">Main Navigation</button>
+        <div class="content">
+        <div class="menu-item">📊Dashboard</div>
+        <div class="menu-item">📅Manage Events</div>
+        <div class="menu-item">🎟️Booking & Tickets</div>
+        <div class="menu-item">👥Attendee Insights</div>
+        <div class="menu-item">📈Analytics & Reports</div>
+        </div>
+
+        <button class="collapsible">Support & Management</button>
+        <div class="content">
+        <div class="menu-item">🆘Contact Support</div>
+        <div class="menu-item">🔔Notifications</div>
+        <div class="menu-item">⚙️Settings</div>
+        </div>
+
+        <button class="collapsible">Additional Features</button>
+        <div class="content">
+        <div class="menu-item">📢Marketing</div>
+        <div class="menu-item">📂Event Categories</div>
+        </div>
+
+        <button class="collapsible">Account Management</button>
+        <div class="content">
+        <div class="menu-item">👤Manage Users</div>
+        <div class="menu-item">🚪Logout</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <dev>
+            <h1>Search bar</h1>
+        </dev>
+        <dev>
+            <span>
+                <span>
+                        <button>number 1</button>
+                        <button>number 2</button>
+                        <button>number 3</button>
+                </span>
+                <span>
+                            <button>number 4</button>
+                            <button>number 5</button>
+                </span>
+            </span>
+            
+            <dev> <button>number 2</button> </dev>
+            <dev> <button>number 2</button> </dev>
+            
+        </dev>
+    </div>
+  </div>
+
+<script>
+  document.querySelectorAll(".collapsible").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+
+      const content = button.nextElementSibling;
+      if (button.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+</script>
+</body>
+</html>
