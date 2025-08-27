@@ -260,4 +260,52 @@ body {
   height: 20px;
 }
 
+.dashboard {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* main | sidebar */
+  gap: 20px;
+  padding: 20px;
+  background: #f7f7f7;
+}
 
+/* Main area with 3 rows */
+.dashboard-main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+/* Top stats row */
+.dashboard-top-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Middle row: Net Sales + Engagement */
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Bottom row: Latest Event spans full width */
+.dashboard-latest {
+  display: grid;
+}
+
+/* Sidebar: Upcoming + Notifications stacked */
+.dashboard-sidebar {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Cards + stat boxes style */
+.dashboard-card,
+.dashboard-stat-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
