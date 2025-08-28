@@ -6,35 +6,35 @@
 }
 
 body {
-  background: #eaeaea;              /* light gray page background */
+  background: #eaeaea;           
   display: flex;
-  justify-content: center;          /* center board horizontally */
-  align-items: center;              /* center board vertically */
-  min-height: 100vh;                /* full screen height */
+  justify-content: center;     
+  align-items: center;              
+  min-height: 100vh;               
   font-family: Arial, sans-serif;
 }
 
-/* The main container */
+
 .board {
-  display: flex;                    /* sidebar + main content side by side */
-  background: #111111;                /* board background */
+  display: flex;                   
+  background: #111111;            
   border-radius: 12px;
   box-shadow: 4px 4px 15px rgba(0,0,0,0.30);
-  overflow: hidden;
-  margin: 10px;                     /* space around board */
-  width: 99%;                /* keep it from stretching too wide */
-  height: calc(100vh - 20px); /* fills screen, minus top/bottom margin */
+  overflow-y: hidden;
+  margin: 10px;                   
+  width: 99%;                
+  height: calc(100vh - 20px); 
 }
 
-/* Sidebar */
+
 .sidebar {
+  display: flex;
   width: 200px;
   background: #111111;
   color: #fff;
-  display: flex;
   flex-direction: column;
   padding: 20px 10px;
-  overflow-y: auto;           /* scrolls internally if too tall */
+  overflow: scroll;          
 }
 
 .sidebar h2 {
@@ -56,8 +56,7 @@ body {
   cursor: pointer;
 }
 
-/* the square container for the plus */
-/* green square background */
+
 .add-event .plus {
   display: inline-flex;       /* so the inner plus is centered */
   align-items: center;
@@ -112,16 +111,16 @@ body {
 }
 
 .collapsible::after {
-  content: "";                         /* no text */
+  content: "";                     
   display: inline-block;
-  width: 14px;                         /* control size */
+  width: 14px;                       
   height: 14px;
   background-image: url("materials/down-arrow.png");
-  background-size: contain;            /* scale inside box */
+  background-size: contain;           
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s;
-  filter: brightness(0) invert(1); /* makes dark → white */
+  filter: brightness(0) invert(1);
 }
 
 .collapsible.active::after {
@@ -148,7 +147,7 @@ body {
   border-radius: 8px;
   color: #ddd;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   transition: background 0.2s;
 }
 
@@ -158,12 +157,12 @@ body {
 
 /* Main content */
 .main-content {
-  flex: 1;
-  background: #fafafa;              /* big white/light area */
+  flex: 1 1 auto;          
+  background: #fafafa;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  overflow-y: auto;           /* main area can also scroll if needed */
+  overflow-y: auto;  
 }
 
 .main-content .search{
@@ -289,23 +288,154 @@ body {
   gap: 20px;
 }
 
-/* Bottom row: Latest Event spans full width */
+
 .dashboard-latest {
   display: grid;
 }
 
-/* Sidebar: Upcoming + Notifications stacked */
+
 .dashboard-sidebar {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
 
-/* Cards + stat boxes style */
+
 .dashboard-card,
 .dashboard-stat-box {
   background: white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.manager-header {
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bottom row: buttons left, sort/date right */
+.manager-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.manager-header .manager-h1 {
+  margin: 0;                    
+  font-weight: bold;
+  font-size: 20px;
+  color: #111;                  
+}
+
+.searcharea2 {
+  display: flex;
+  align-items: center;       
+  border: 1px solid #434343; 
+  border-radius: 15px;
+  padding: 0 8px;            
+  height: 40px;
+  margin-top: 7px;
+}
+
+.searcharea2 input{
+  flex: 1;              
+  height: 100%;           
+  border: none;           
+  outline: none;          
+  padding: 0 10px;        
+  font-size: 16px;
+  background: transparent; 
+}
+
+.manage-filter {
+  display: flex;
+  height: 40px;
+  gap: 12px;                 
+  align-items: center;
+  margin-right: 20px;            
+}
+.filter-menu select {
+  padding: 6px 10px;
+  border: 1px solid #434343;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+.actions-left {
+  display: flex;
+  gap: 10px;  /* space between buttons */
+}
+
+.actions-right {
+  display: flex;
+  gap: 12px;  /* space between dropdown & date filter */
+  align-items: center;
+}
+
+/* Shared button style */
+.btn-add {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #0122F5;
+  border: 2px solid #0122F5;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #0122F5;
+  color: white;
+}
+
+.btn-att {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #FA921B;
+  border: 2px solid #FA921B;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-att:hover {
+  background-color: #FA921B;
+  color: white;
+}
+
+
+
+
+/* Sort dropdown */
+.sort-select {
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid #434343;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Date input */
+.date-filter {
+  padding: 6px 10px;
+  border: 1px solid #434343;
+  border-radius: 15px;
+  font-size: 14px;
 }
