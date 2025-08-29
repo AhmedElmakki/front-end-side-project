@@ -313,6 +313,8 @@ body {
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
   padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .header-top {
@@ -375,16 +377,15 @@ body {
 
 .actions-left {
   display: flex;
-  gap: 10px;  /* space between buttons */
+  gap: 10px;  
 }
 
 .actions-right {
   display: flex;
-  gap: 12px;  /* space between dropdown & date filter */
+  gap: 12px;  
   align-items: center;
 }
 
-/* Shared button style */
 .btn-add {
   padding: 8px 14px;
   border: none;
@@ -420,9 +421,6 @@ body {
 }
 
 
-
-
-/* Sort dropdown */
 .sort-select {
   padding: 6px 10px;
   background: transparent;
@@ -432,10 +430,149 @@ body {
   cursor: pointer;
 }
 
-/* Date input */
+
 .date-filter {
   padding: 6px 10px;
   border: 1px solid #434343;
   border-radius: 15px;
   font-size: 14px;
 }
+
+.legend{
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 10px;
+  margin-top: 5px;
+  
+}
+
+.legend-content{
+  display: flex;
+  background: transparent;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+.grid-holder{
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 10px;
+  margin-top: 10px;
+
+}
+
+.event-card{
+  background: white;
+  border-radius: 12px;
+  height: 150px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.board-logs {
+  display: flex;                   
+  background: #eaeaea;            
+  border-radius: 12px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.30);
+  overflow-y: hidden;
+  margin: 10px;                   
+  width: 99%;                
+  height: calc(100vh - 20px); 
+  justify-content: center;     
+  align-items: center;  
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     
+  align-items: center;
+  width: 600px;
+  border-radius: 15px;
+  background: #242424;    
+  color: #fff;
+  padding: 20px 10px;     
+  
+}
+
+.login h2{
+  margin: 10px;
+  color: #C1FF72;
+  font-size: 50px;
+}
+
+.login .Welcome{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.login-form{
+  display: block;
+  align-items: center;
+  align-content: center;
+text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form .label{
+  display: grid;
+  align-items: center;
+  text-align: left;
+  align-content: center;
+}
+
+.login-form input{
+  align-items: center;
+  align-content: center;
+  height: 100%;           
+  border-radius: 15px;
+  padding:10px;        
+  font-size: 16px;
+  margin: 5px;
+}
+
+
+.login-form .submit{
+  padding: 8px 14px;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #C1FF72;
+  border: 2px solid #C1FF72;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form .submit:hover{
+    background-color: #C1FF72;
+    color: #111111;
+}
+
+.login-form .Register{
+  color: #C1FF72;
+  border: 2px solid #C1FF72;
+  padding: 8px 14px;
+  border-radius: 15px;
+}
+
+.login-form .Register:hover{
+    background-color: #C1FF72;
+    color: #111111;
+}
+.login-form .Register:click{
+    background-color: #C1FF72;
+    color: #111111;
+}
+
+.login-form .Register .submit{
+  align-items: center;
+  align-content: center;
+}
+
+
