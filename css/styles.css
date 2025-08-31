@@ -30,12 +30,14 @@ body {
 
 .sidebar {
   display: flex;
+  overflow:  hidden;
   flex-direction: column;
   width: 200px;
   background: #111111;
   color: #fff;
   padding: 20px 10px;
 
+  min-height: 100%; 
   height: 100%;          
   overflow-y: auto;     
   overflow-x: hidden;    
@@ -78,9 +80,9 @@ body {
   width: 20px;
   height: 20px;
   background-color: white; /* this is the color of the plus */
-  -webkit-mask: url("materials/white plus sign.svg") no-repeat center;
+  -webkit-mask: url("..materials/white plus sign.svg") no-repeat center;
   -webkit-mask-size: contain;
-  mask: url("materials/white plus sign.svg") no-repeat center;
+  mask: url("../materials/white plus sign.svg") no-repeat center;
   mask-size: contain;
 }
 
@@ -119,7 +121,8 @@ body {
   display: inline-block;
   width: 14px;                       
   height: 14px;
-  background-image: url("materials/down-arrow.png");
+  background-image: url("../materials/down-arrow.png");
+  transform: rotate(-90deg);
   background-size: contain;           
   background-repeat: no-repeat;
   background-position: center;
@@ -128,7 +131,7 @@ body {
 }
 
 .collapsible.active::after {
-  transform: rotate(-90deg);
+  transform: rotate(0);
 }
 
 /* Collapsible content */
@@ -138,6 +141,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: max-height 0.3s ease; /* smooth animation */
+  
 }
 
 .collapsible.active + .content {
