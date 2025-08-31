@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to EventX</title>
-   <link rel="stylesheet" href="styles.css"> 
+  <title>EventX Login </title>
+  <link rel="stylesheet" href="accounts.css">
 </head>
 <body>
-<div class="board-logs">
-  
-  <div class="login">
-        <h2>EventX</h2>
-        <h2 class="Welcome">EventX Managment App</h2>
-                <form action="" method="post" class="login-form" >
-                    <div >
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username"  required placeholder="Enter your username">
-                    </div>
+  <div class="board">
+    <div class="sidebar">
+      <h1>EventX</h1>
+      <h2 style="color: #C1FF72;">Welcome back!</h2>
+    </div>
 
-                    <div >
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password"  required placeholder="Enter your password">
-                    </div>
+    <div class="form-area">
+      <h1>Login</h1>
+      <form>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter username">
+        </div>
 
-                    <button class="submit" type="submit">Login</button>
-                    <a href="register.html" class="Register">Register</a>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter password">
+        </div>
 
-                </form>
-
-  </div>   
-
+        <button class="form-btn" type="submit">Login</button>
+        <a class="form-btn" style="margin-left: auto;" href="Sign Up.html">Sign Up</a>
+      </form>
+    </div>
   </div>
-
 </body>
 </html>
+
+
