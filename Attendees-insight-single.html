@@ -11,9 +11,71 @@
 <div class="board">
 
     <div id="sidebar-container"></div>
-
+    
     <div class="main-content">
-        
+      <header class="manager-header">
+        <div class="header-top">
+           <h1 class="manager-h1">Attendee Insights -      </h1>
+            <div class="manage-filter">
+                <div class="searcharea2">
+                  <button class="search-button" title="Search">
+                    <img src="materials/search icon.svg" alt="search" />
+                  </button>
+                  <input type="text" placeholder="Search..." />
+                </div>
+              </div>
+            </div>
+            <div class="manager-actions">
+              <div class="actions-left">
+                <p>                </p>
+                <p>                </p>
+                <p>                </p>
+                <p>                </p>
+              </div>
+
+              <div class="actions-right">
+                <div class="Attendee-counter" style="font-size: 15px; padding: 15px;">Attendees:*number*</div>
+                <select class="sort-select">
+                  <option value="">Sort by Status</option>
+                  <option value="upcoming">Upcoming Events</option>
+                  <option value="pending">Pending Events</option>
+                  <option value="closed">Closed Events</option>
+                </select>
+                
+              </div>
+            </div>
+      </header>
+
+      <div class="event-in">
+          <div>
+
+              <div class="dashboard-card attendees-main-graph">
+                <h3>attendee age</h3>
+              </div>
+
+              <div class="attendees-sub-graphs-holder2">
+                  <div class="dashboard-card attendees-sub-graph2">
+                    <h3>attendee Interest</h3>
+                  </div>
+                  <div class="dashboard-card attendees-sub-graph2">
+                    <h3>attendee top location</h3>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div>
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-card dashboard-upcoming-events"><h3>Engagement</h3></div>
+                <div class="dashboard-card dashboard-notifications"><h3>location</h3></div>
+              </aside>
+
+
+          </div>
+
+      </div>
+
 
     </div>
 

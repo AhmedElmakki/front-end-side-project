@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - EventX</title>
+   <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+<div class="board">
+
+  <div id="sidebar-container"></div>
+
+  <div class="main-content">
+    <h1 style="text-align: center; margin-bottom: 30px; color: #333;">Event Details</h1>
+    <form class="event-details-form">
+        <!-- Section 1 -->
+        <div class="event-details text-group">
+          <div>
+            <label for="event-name">Event Name:</label>
+            <textarea readonly name="event-name" id="event-name"></textarea>
+          </div>
+          <div>
+            <label for="event-date">Event Date:</label>
+            <textarea readonly name="event-date" id="event-date"></textarea>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="event-details text-group">
+          <div>
+            <label for="event-venue">Event Venue:</label>
+            <textarea readonly name="event-venue" id="event-venue"></textarea>
+          </div>
+          <div>
+            <label for="event-time">Event Time:</label>
+            <textarea readonly name="event-time" id="event-time"></textarea>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="event-details">
+          <div class="event-dis">
+          <label for="event-description">Event Description:</label>
+          <textarea readonly name="event-description" id="event-description"></textarea>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="event-details grid-2">
+          <div>
+            <label for="ticket-price">Ticket Price:</label>
+            <textarea readonly name="ticket-price" id="ticket-price"></textarea>
+          </div>
+
+          <div>
+            <label for="seat-amount">Seat Amount:</label>
+            <textarea readonly name="seat-amount" id="seat-amount"></textarea>
+          </div>
+
+          <div>
+            <label for="available-seats">Available Seats:</label>
+            <textarea readonly name="available-seats" id="available-seats"></textarea>
+          </div>
+
+          <div>
+            <label for="popularity">Popularity:</label>
+            <textarea readonly name="popularity" id="popularity"></textarea>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="event-details event-bottom-row">
+          <div class="event-seat-allocation-graph">
+            <!-- seat graph content later -->
+          </div>
+        <div>
+          <div class="event-details two-col">
+            <div>
+              <label for="tags">Tags:</label>
+              <textarea readonly name="tags" id="tags"></textarea>
+            </div>
+            <div>
+              <label for="expected-attendance">Expected Attendance:</label>
+              <textarea readonly name="expected-attendance" id="expected-attendance"></textarea>
+            </div>
+          </div>
+
+          <div class="qr-placeholder">QR code payment area (leave blank)</div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-edit" onclick="window.location.href='Event-edit.html'" >Edit</button>
+            <button type="button" class="btn-insight" onclick="window.location.href='Attendees-insight-single.html'">Attendees insight</button>
+          </div>
+        </div>
+        </div>
+    </form>
+  </div>
+
+
+</div>
+
+<script src="js/sidebar.js"></script>
+</body>
+</html>

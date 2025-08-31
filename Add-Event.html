@@ -3,19 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EventX Attendee Insights</title>
-   <link rel="stylesheet" href="css/styles.css"> 
+  <title>Add Event - EventX</title>
+  <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
 
 <div class="board">
 
-    <div id="sidebar-container"></div>
+  <div id="sidebar-container"></div>
 
-    <div class="main-content">
-        
+  <div class="main-content">
+    <h1 style="text-align: center; margin-bottom: 30px; color: #333;">Add Event</h1>
 
-    </div>
+    <form class="event-details-form">
+      <!-- Section 1 -->
+      <div class="event-details text-group">
+        <div>
+          <label for="event-name">Event Name:</label>
+          <input type="text" name="event-name" id="event-name" placeholder="Enter event name">
+        </div>
+        <div>
+          <label for="event-date">Event Date:</label>
+          <input type="date" name="event-date" id="event-date">
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="event-details text-group">
+        <div>
+          <label for="event-venue">Event Venue:</label>
+          <input type="text" name="event-venue" id="event-venue" placeholder="Enter venue">
+        </div>
+        <div>
+          <label for="event-time">Event Time:</label>
+          <input type="time" name="event-time" id="event-time">
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="event-details">
+        <div class="event-dis">
+          <label for="event-description">Event Description:</label>
+          <input name="event-description" id="event-description" placeholder="Enter event description"></input>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="event-details grid-2">
+        <div>
+          <label for="ticket-price">Ticket Price:</label>
+          <input type="number" name="ticket-price" id="ticket-price">
+        </div>
+
+        <div>
+          <label for="seat-amount">Seat Amount:</label>
+          <input type="number" name="seat-amount" id="seat-amount">
+        </div>
+
+        <div>
+          <label for="available-seats">Available Seats:</label>
+          <input type="number" name="available-seats" id="available-seats">
+        </div>
+
+        <div>
+          <label for="tags">Tags:</label>
+          <input type="text" name="tags" id="tags" placeholder="Comma separated tags">
+        </div>
+      </div>
+
+      <!-- Section 5: Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn-save">Add Event</button>
+        <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Cancel</button>
+      </div>
+
+    </form>
+  </div>
 
 </div>
 
